@@ -24,7 +24,21 @@ def weather():
     try:
         source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q='+city + '&appid=' + api).read() 
     except:
-        return 'Wrong Input:'+city
+        city = 'mumbai'
+        
+        source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q='+city + '&appid=' + api).read() 
+        list_of_data = json.loads(source)
+        data = { 
+		"country_code": str(list_of_data['sys']['country']), 
+		"coordinate": str(list_of_data['coord']['lon']) + ' '
+					+ str(list_of_data['coord']['lat']), 
+		"temp": str(list_of_data['main']['temp']) + 'k', 
+		"pressure": str(list_of_data['main']['pressure']), 
+		"humidity": str(list_of_data['main']['humidity']), 
+        "cityname": city,
+        "temp_cel": str(round(list_of_data['main']['temp']-273.15,2))+'C'
+	}
+        return render_template('city.html', msg='City name invalid!', data=data)
     list_of_data = json.loads(source)
     data = { 
 		"country_code": str(list_of_data['sys']['country']), 
