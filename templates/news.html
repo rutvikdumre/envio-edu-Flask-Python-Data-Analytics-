@@ -1,0 +1,9 @@
+{% for item in titles %}
+<br><hr><br>
+    <a href="{{ url[loop.index0] }}" target="_blank">{{ item }}</a><br>
+    <br>
+    Published At: {{ time[loop.index0] }}<br>
+    {{ content[loop.index0] }}<br>
+    <a href="{{ url[loop.index0] }}" target="_blank"><img src="{{ image[loop.index0] }}" alt="alternatetext" ></a><br>
+
+{% endfor %}

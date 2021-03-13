@@ -1,3 +1,4 @@
+from news import getNews
 from flask import Flask, render_template, request 
 
 # import json to load JSON data to a python dictionary 
@@ -37,5 +38,9 @@ def weather():
 	}
     print(data) 
     return render_template('city.html', data = data) 
+@app.route('/news')
+def news():
+    titles,content,url,image,time=getNews()
+    return render_template('news.html',titles=titles,content=content,url=url,image=image,time=time)
 if __name__ == '__main__':
     app.run(debug = True)
