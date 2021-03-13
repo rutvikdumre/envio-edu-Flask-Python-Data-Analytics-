@@ -18,6 +18,7 @@ def index():
 def weather():
     if request.method == 'POST':
         city = request.form['city']
+        city=city.replace(' ', '+')
     else:
         city = 'mumbai'
     api = 'dcf3d7d0f1a4ec2f74db52f75aedfa41'
@@ -35,7 +36,7 @@ def weather():
 		"temp": str(list_of_data['main']['temp']) + 'k', 
 		"pressure": str(list_of_data['main']['pressure']), 
 		"humidity": str(list_of_data['main']['humidity']), 
-        "cityname": city,
+        "cityname": city.replace('+', ' '),
         "temp_cel": str(round(list_of_data['main']['temp']-273.15,2))+'C'
 	}
         return render_template('city.html', msg='City name invalid!', data=data)
@@ -47,7 +48,7 @@ def weather():
 		"temp": str(list_of_data['main']['temp']) + 'k', 
 		"pressure": str(list_of_data['main']['pressure']), 
 		"humidity": str(list_of_data['main']['humidity']), 
-        "cityname": city,
+        "cityname": city.replace('+', ' '),
         "temp_cel": str(round(list_of_data['main']['temp']-273.15,2))+'C'
 	}
     print(data) 
