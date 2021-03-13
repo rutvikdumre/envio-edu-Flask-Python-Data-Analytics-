@@ -42,5 +42,17 @@ def weather():
 def news():
     titles,content,url,image,time=getNews()
     return render_template('news.html',titles=titles,content=content,url=url,image=image,time=time)
+@app.route('/maps')
+def maps():
+    return render_template('maps.html')
+@app.route('/temp_anomaly')
+def temp_anomaly():
+    return render_template('temp_anomaly.html')
+@app.route('/air')
+def air():
+    return render_template('air.html')
+@app.route('/rain')
+def rain():
+    return render_template('rain.html')
 if __name__ == '__main__':
     app.run(debug = True)
