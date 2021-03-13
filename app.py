@@ -9,7 +9,11 @@ import urllib.request
 
 app = Flask(__name__) 
 
-@app.route('/', methods =['POST', 'GET']) 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/city', methods =['POST', 'GET']) 
 def weather():
     if request.method == 'POST':
         city = request.form['city']
@@ -32,6 +36,6 @@ def weather():
         "temp_cel": str(round(list_of_data['main']['temp']-273.15,2))+'C'
 	}
     print(data) 
-    return render_template('index.html', data = data) 
+    return render_template('city.html', data = data) 
 if __name__ == '__main__':
     app.run(debug = True)
