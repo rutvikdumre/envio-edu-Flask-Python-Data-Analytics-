@@ -13,6 +13,30 @@
 		<link rel="stylesheet"  type= "text/css" href= "{{ url_for('static',filename='assets/css/main.css') }}" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<!-- Bootstrap -->
+		<link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+          integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+          integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+          crossorigin="anonymous"
+        ></script>	
+
 	</head>
 	<body class="landing">
 
@@ -47,7 +71,7 @@
 			<div class="inner">
 				<a name="weather"></a>
 				<article class="feature right">
-					<span class="image"><img src="../static/images/weather.jpg" alt="" /></span>
+					<span class="image"><img src="../static/images/weather-new.jpg" alt="" /></span>
 					<div class="content">
 						<a name="map"></a>
 						<h2>Know more about Climate</h2>
@@ -63,7 +87,7 @@
 					</div>
 				</article>
 				<article class="feature left">
-					<span class="image"><img src="../static/images/map (2).jpg" alt="" /></span>
+					<span class="image"><img src="../static/images/mapnew.jpg" alt="" /></span>
 					<div class="content">
 						<h2>Find out about the weather</h2>
 						<p>Check the weather around you and all over the world at a glance.</p>
@@ -79,32 +103,83 @@
 		</section>
 
 		<!-- Two -->
-        <section id="three" class="wrapper style3 special">
-            <div class="inner">
-                <header class="major narrow    ">
-                    <h2>Climate change is real</h2>
-                    <br>
-                    <p>“The world is reaching the tipping point beyond which climate change may become irreversible. <br> 
-                        If this happens, we risk denying present and future generations
-                        the right to a healthy and sustainable planet – the whole of humanity stands to lose.”</p>
-                </header>
-                <ul class="actions">
-                    <li><a href="/maps" class="button big alt">Know about climate anomalies</a></li>
-                </ul>
-            </div>
-        </section>
-<section id="two" class="wrapper special">
-                <div class="inner">
-                    <header class="major narrow">
-                        <h2>United Nations Climate Change [UNFCCC]</h2>
-                        <br>
-                        <p>The UNFCCC secretariat (UN Climate Change) is the United Nations entity tasked with supporting the global response to the threat of climate change.</p>
-                    </header>
-                    <ul class="actions">
-                        <li><a href="https://unfccc.int/about-us/about-the-secretariat" class="button big alt">UNFCCC</a></li>
-                    </ul>
-                </div>
-            </section>
+		<section id="three" class="wrapper style3 special">
+			<div class="inner">
+				<header class="major narrow">
+					<h2>United Nations Climate Change [UNFCCC]</h2>
+					<br>
+					<p>The UNFCCC secretariat (UN Climate Change) is the United Nations entity tasked with supporting the global response to the threat of climate change.</p>
+				</header>
+				<ul class="actions">
+					<li><a href="https://unfccc.int/about-us/about-the-secretariat" class="button big alt">UNFCCC</a></li>
+				</ul>
+			</div>
+		</section>
+
+			<section id="two" class="wrapper special">
+				<div class="inner">
+					<header class="major narrow">
+						<h2>Here's how you can make a difference</h2>
+					</header>
+					<div class="row">
+
+						<div class="prevention-div col-lg-4 col-md-6" style="margin-bottom: 2%;">
+						  <div class="card">
+							<img class="prevention-img card-img-top" src="../static/images/prevention-1.jpg" alt="Card image cap" style="height: 20vh;">
+							<div class="card-body">
+								<p class="card-text"> Make Your Commute Green. </p>
+							</div>
+						  </div>
+						</div>
+				  
+						<div class="prevention-div col-lg-4 col-md-6">
+							<div class="card">
+								<img class="prevention-img card-img-top" src="../static/images/prevention-2new.jpg" alt="Card image cap" style="height: 20vh;">
+							  <div class="card-body">
+								  <p class="card-text">Be More Conservative with Energy Usage. </p>
+							  </div>
+							</div>
+						  </div>
+				  
+						<div class="prevention-div col-lg-4 col-md-6">
+							<div class="card">
+							  <img class="prevention-img card-img-top" src="../static/images/prevention-3.jpg" alt="Card image cap" style="height: 20vh;">
+							  <div class="card-body">
+								  <p class="card-text">Consume less, waste less, enjoy life more.</p>
+							  </div>
+							</div>
+						</div>
+
+						<div class="prevention-div col-lg-4 col-md-6">
+							<div class="card">
+							  <img class="prevention-img card-img-top" src="../static/images/prevention-4.jpg" alt="Card image cap" style="height: 20vh;">
+							  <div class="card-body">
+								  <p class="card-text">Start a climate conversation.</p>
+							  </div>
+							</div>
+						  </div>
+					
+						  <div class="prevention-div col-lg-4 col-md-6">
+							  <div class="card">
+								<img class="prevention-img card-img-top" src="../static/images/prevention-5new.jpg" alt="Card image cap" style="height: 20vh;">
+								<div class="card-body">
+									<p class="card-text">Encourage the use of renewable energies.</p>
+								</div>
+							  </div>
+							</div>
+					
+						  <div class="prevention-div col-lg-4 col-md-6">
+							  <div class="card">
+								<img class="prevention-img card-img-top" src="../static/images/prevention-6new.jpg" alt="Card image cap" style="height: 20vh;">
+								<div class="card-body">
+									<p class="card-text">Recyle</p>
+								</div>
+							  </div>
+						  </div>
+
+					  </div>
+				</div>
+			</section>
 
 
 		<!-- Four -->
