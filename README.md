@@ -1,7 +1,12 @@
 # envio-edu
 A website to raise awareness about climate change, that allows a user to get the live news about climate change from all over the world, help visualize climate anomalies with the help of interactive maps and also get current weather conditions of any city.
 
-https://envio-edu.herokuapp.com/
+
+## Prototype
+
+
+### Presentation
+https://youtu.be/UHt5ujYXLY0
 
 
 ## Team Name
@@ -46,16 +51,7 @@ pandas==1.2.3
 plotly==4.14.3
 
 
-## Prototype
 
-### Live Prototype
-https://envio-edu.herokuapp.com
-
-
-### Presentation
-https://youtu.be/UHt5ujYXLY0
-
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/an_webp/UHt5ujYXLY0/mqdefault_6s.webp?du=3000&sqp=CMr2t4IG&rs=AOn4CLAXcnVJ59qedGBb6TshyQY4-5ZirQ)](https://youtu.be/UHt5ujYXLY0)
 
 
 
